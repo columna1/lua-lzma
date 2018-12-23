@@ -36,11 +36,3 @@ MY_STDAPI LzmaCompress(unsigned char *dest, size_t  *destLen, const unsigned cha
   return LzmaEncode(dest, destLen, src, srcLen, &props, outProps, outPropsSize, 0,
       NULL, &g_Alloc, &g_Alloc);
 }
-
-
-MY_STDAPI LzmaUncompress(unsigned char *dest, size_t  *destLen, const unsigned char *src, size_t  *srcLen,
-  const unsigned char *props, size_t propsSize)
-{
-  ELzmaStatus status;
-  return LzmaDecode(dest, destLen, src, srcLen, props, (unsigned)propsSize, LZMA_FINISH_ANY, &status, &g_Alloc);
-}
