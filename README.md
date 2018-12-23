@@ -1,9 +1,10 @@
 # lua-lzma
 a simple lua bindings for lzma
+Edited to be compatible with lua 5.1/luajit
 * **LZMA SDK** Copyright (C) 1999-2010 Igor Pavlov
 
 ## Usage
-```
+```lua
 local lzma = require "lzma"
 
 local src = [[
